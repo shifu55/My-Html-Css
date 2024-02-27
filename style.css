@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.sidebar{
+    width: 25%;
+    background: gray;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+.sidebar li a{
+    display: block;
+    color: white;
+    padding: 8px 15px;
+
+}
+.sidebar li .active{
+    background-color: black;
+}
+.sidebar li .active:hover{
+    background: rgb(53, 52, 52);
+}
+
+.navbar{
+    margin-left: 25%;
+    padding: 3px 15px;
+    height: auto;
+    margin-top: 10px;
+}
+.section ul{
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.three{
+    display: grid;
+    grid-gap: 10px;
+    margin:20px 0px;
+    grid-template-columns:1fr 1fr;
+}
+.three .box:first-child{
+    padding: 10px;
+    background: rgb(113, 150, 113);
+    border-radius: 5px;
+}
+.three .box:last-child{
+    padding: 10px;
+    background: rgb(146, 175, 78);
+    border-radius: 5px;
+}
+footer{
+    display: flex;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    background: rgb(77, 77, 124);
+    margin: 5px 0px;
+    padding: 10px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (max-width:900px) {
+    .sidebar{
+    width: 100%;
+    height: auto;
+    position: relative;
+    }
+    .sidebar li a{
+        float: left;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:414px) {
+    .sidebar li a{
+        background: rgb(88, 129, 88);
+        text-align: center;
+        float: none;
+    }
+    .navbar{
+        margin-left: 0px;
+    }
+    .section ul, .three{
+        grid-template-columns: 1fr;
+    }
+}
